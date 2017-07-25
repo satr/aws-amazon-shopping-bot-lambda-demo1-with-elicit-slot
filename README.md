@@ -3,6 +3,27 @@ Amazon Lambda function, implemented on Java, for AWS Lex bot.
 
 Demo project for the introduction video tutorial: https://youtu.be/cy9GX33nuKM
 
+This is an extended copy of the original demo:
+https://github.com/satr/aws-amazon-shopping-bot-lambda-demo1
+
+Added support of elicit slote (request of missed data):
+```
+{
+  "dialogAction": {
+    "type": "ElicitSlot",
+    "message": {
+      "contentType": "PlainText",
+      "content": "How much would you like?"
+    },
+    "intentName": "BakeryDepartment",
+    "slots": {
+      "Amount": null,
+      "BakeryProduct": "bread"
+    },
+    "slotToElicit": "Amount"
+  }
+}
+```
 Amazon Lex allows to build conversation bots and integrate them to Facebook Messenger, Slack or Twilio:
 https://aws.amazon.com/lex/
 
