@@ -2,13 +2,11 @@ package io.github.satr.aws.lambda.shoppingbot;
 
 public class DialogAction {
     private final String type;
-    private final String fulfillmentState;
     private final Message message;
 
-    public DialogAction(String type, String fulfillmentState, Message message) {
+    public DialogAction(String type, Message message) {
 
         this.type = type;
-        this.fulfillmentState = fulfillmentState;
         this.message = message;
     }
 
@@ -16,11 +14,8 @@ public class DialogAction {
         return type;
     }
 
-    public String getFulfillmentState() {
-        return fulfillmentState;
-    }
-
     public Message getMessage() {
         return message;
     }
+
 }

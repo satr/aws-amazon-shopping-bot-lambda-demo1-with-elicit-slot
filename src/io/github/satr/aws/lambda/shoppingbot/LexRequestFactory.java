@@ -10,6 +10,7 @@ public class LexRequestFactory {
         lexRequest.setBotName(botName);
         Map<String, Object> currentIntent = (Map<String, Object>) input.get("currentIntent");
         lexRequest.setDepartmentName((String)currentIntent.get("name"));
+        lexRequest.setIntentName((String)currentIntent.get("name"));
         Map<String, Object> slots = (Map<String, Object>) currentIntent.get("slots");
         lexRequest.setAmount((String)slots.get("Amount"));
         lexRequest.setProduct((String)slots.get("BakeryProduct"));
